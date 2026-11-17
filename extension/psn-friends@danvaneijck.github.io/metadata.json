@@ -1,0 +1,8 @@
+{
+  "uuid": "psn-friends@danvaneijck.github.io",
+  "name": "PSN Friends",
+  "description": "See which of your PlayStation Network friends are online and what they're playing, right from the top bar.\n\nRequires the psn-friends command-line tool: https://github.com/danvaneijck/psn-friends",
+  "url": "https://github.com/danvaneijck/psn-friends",
+  "shell-version": ["46", "47", "48", "49", "50"],
+  "version": 1
+}

@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  rust:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo fmt --check
+      - run: cargo clippy --locked --all-targets -- -D warnings
+      - run: cargo test --locked
+
+  extension:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Syntax-check extension.js
+        run: node --check --input-type=module < extension/*/extension.js
+      - name: Validate metadata.json
+        run: python3 -c 'import json,glob; m=json.load(open(glob.glob("extension/*/metadata.json")[0])); assert m["uuid"] == glob.glob("extension/*")[0].split("/")[1], "uuid must match folder"'
+      - name: Check install.sh
+        run: bash -n install.sh && shellcheck install.sh

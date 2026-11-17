@@ -1,0 +1,72 @@
+.psn-count {
+  padding-left: 4px;
+  font-weight: bold;
+}
+
+.psn-friend {
+  spacing: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.psn-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  background-size: cover;
+}
+
+.psn-game-art {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  background-size: cover;
+}
+
+.psn-picture-empty {
+  background-color: rgba(127, 127, 127, 0.25);
+}
+
+.psn-picture-fallback {
+  icon-size: 18px;
+  color: rgba(127, 127, 127, 0.9);
+}
+
+.psn-friend-text {
+  width: 230px;
+  spacing: 1px;
+}
+
+.psn-name {
+  font-weight: bold;
+}
+
+.psn-detail,
+.psn-subtle {
+  font-size: 0.9em;
+}
+
+.psn-playing {
+  color: #3584e4;
+}
+
+.psn-online {
+  color: #26a269;
+}
+
+.psn-subtle {
+  color: rgba(127, 127, 127, 1);
+}
+
+.psn-empty,
+.psn-error-body {
+  font-size: 0.9em;
+}
+
+.psn-error-title {
+  font-weight: bold;
+}
+
+.psn-error-body {
+  width: 300px;
+}
